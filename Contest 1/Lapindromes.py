@@ -6,22 +6,18 @@
 
 t = int(input())
     
-while t > 0 :
+while t >0 :
     stng = input()
     t -= 1
     lh = len(stng)
     if lh % 2 == 0 :
-        x = int(lh//2)
-        lfstr = stng[:x]
-        rgstr = stng[x:]
+        lfstr = stng[:lh//2]
+        rgstr = stng[lh//2:]
     else :
-        x = int((lh-1) // 2)
-        lfstr = stng[:x]
-        x = int((lh+1) // 2)
-        rgstr = stng[x:]
-    lfstr = ''.join(sorted(lfstr))
-    rgstr = ''.join(sorted(rgstr))
-    if lfstr == rgstr :
+        lfstr = stng[:(lh-1) // 2]
+        rgstr = stng[(lh+1) // 2:]
+  
+    if sorted(lfstr) == sorted(rgstr) :
         print("YES")
     else :
         print("NO")
