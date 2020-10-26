@@ -6,7 +6,7 @@
 
 t = int(input())
     
-while t >0 :
+while t > 0 :
     stng = input()
     t -= 1
     lh = len(stng)
